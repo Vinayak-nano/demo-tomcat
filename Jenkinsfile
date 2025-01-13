@@ -34,6 +34,20 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    // Example: Deploying using Docker run
+                    sh """
+                    docker pull ${DOCKER_IMAGE}:${IMAGE_TAG}
+                    docker stop my-tomcat || true
+                    docker rm my-tomcat || true
+                    docker run -d --name my-tomcat -p 8080:8080 ${DOCKER_IMAGE}:${IMAGE_TAG}
+                    """
+                }
+            }
+        }
     }
 
     post {
