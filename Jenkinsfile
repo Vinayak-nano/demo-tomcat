@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_CREDENTIALS = 'Vinayak@192' // Replace with your Docker Hub credentials ID
+        DOCKER_HUB_CREDENTIALS = 'docker-hub' // Replace with your Docker Hub credentials ID
         DOCKER_IMAGE = 'vinayak192/tomcat'
         IMAGE_TAG = 'v1' // or 'v1' for versioning
     }
