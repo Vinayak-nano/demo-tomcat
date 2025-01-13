@@ -3,15 +3,16 @@ pipeline {
 
     environment {
         DOCKER_HUB_CREDENTIALS = 'docker-hub' // Replace with your Docker Hub credentials ID
-        DOCKER_IMAGE = 'vinayak192/tomcat'
-        IMAGE_TAG = 'v4' // or 'v1' for versioning
+        DOCKER_IMAGE = 'vinayak192/tomcat'    // Docker image repository
+        IMAGE_TAG = 'v4'                      // Image tag for versioning
     }
 
     stages {
-        stage('Build with Maven tools') {
+        stage('Build with Maven Tools') {
             steps {
                 script {
                     // Ensure Maven is installed on your Jenkins agent
+                    echo 'Building the application using Maven...'
                     sh 'mvn clean package'
                 }
             }
@@ -20,6 +21,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                    echo 'Building the Docker image...'
                     sh "docker build -t ${DOCKER_IMAGE}:${IMAGE_TAG} ."
                 }
             }
@@ -28,6 +30,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
+                    echo 'Pushing the Docker image to Docker Hub...'
                     docker.withRegistry('', "${DOCKER_HUB_CREDENTIALS}") {
                         sh "docker push ${DOCKER_IMAGE}:${IMAGE_TAG}"
                     }
@@ -38,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    // Example: Deploying using Docker run
+                    echo 'Deploying the application using Docker...'
                     sh """
                     docker pull ${DOCKER_IMAGE}:${IMAGE_TAG}
                     docker stop my-tomcat || true
