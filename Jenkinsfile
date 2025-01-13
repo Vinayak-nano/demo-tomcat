@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_HUB_CREDENTIALS = 'docker-hub' // Replace with your Docker Hub credentials ID
         DOCKER_IMAGE = 'vinayak192/tomcat'
-        IMAGE_TAG = 'v1' // or 'v1' for versioning
+        IMAGE_TAG = 'v4' // or 'v1' for versioning
     }
 
     stages {
