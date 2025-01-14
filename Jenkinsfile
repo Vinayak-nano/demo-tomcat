@@ -25,7 +25,7 @@ pipeline {
 
         stage('Push Docker Image') {
             environment {
-                DOCKER_CREDENTIALS_ID = 'your-docker-credentials-id' // Replace with Jenkins credentials ID
+                DOCKER_CREDENTIALS_ID = 'docker-hub' // Replace with Jenkins credentials ID
             }
             steps {
                 echo 'Pushing the Docker image to Docker Hub...'
