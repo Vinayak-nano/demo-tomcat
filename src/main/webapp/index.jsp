@@ -1,9 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Header Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .sub-header {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World !! v1 | Sample App v1.0 </h1>
-<p>You have successfully deployed the Web Application on Tomcat !!</p>
-<button>Error v1 v2</button>
-<button>Submit</button>
-<button>Vinayak</button>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Your one-stop solution for amazing content</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="sub-header">
+        <p>Explore our latest updates and features below!</p>
+    </div>
 </body>
 </html>
+
