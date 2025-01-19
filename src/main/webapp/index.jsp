@@ -5,7 +5,12 @@
 <button>Error v1 v2</button>
 <button>Submit</button>
 <table>
-<lab> 1234 </lab>
+ <thead>
+<tr>
+<th>Field</th>
+<th>Input</th>
+</tr>
+</thead>
 </table>
 </body>
 </html>
