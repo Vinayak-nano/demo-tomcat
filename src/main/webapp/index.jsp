@@ -46,7 +46,7 @@
     </header>
     <nav>
         <a href="#home">HomeS</a>
-        <a href="#about">About</a>
+        <a href="#about">AboutS</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
