@@ -45,7 +45,7 @@
         <p>Your one-stop solution for amazing content</p>
     </header>
     <nav>
-        <a href="#home">Home</a>
+        <a href="#home">HomeS</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
